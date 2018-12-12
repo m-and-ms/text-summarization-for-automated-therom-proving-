@@ -1,0 +1,30 @@
+If a line through point $p1$ meets a circle at points $p2$ and $p3$, then the product of (signed) distances from $p1$ to those points is a constant (called the power of P1) that depends only upon the P1's position relative to the circle. Specifically, if $r$ is the radius of the circle, then $|\overrightarrow{p1p2}||\overrightarrow{p1p3}| \;=\; |\overline{Op1}|^2 - r^2 \tag{$\star$}$
+\begin{align*} s & = \frac{a+b+c}{2}\\ A & = \sqrt{s(s-a)(s-b)(s-c)} \end{align*}
+let $x$ be any integer and let $y$ be integer and let $$C(x,y)=\frac{x!}{y!(x-y)!}\,$$.For any $x$ and $y$ Prove that $C(x,x-y)= \frac{x!}{(x-y)!(x-(x-y))!} = \frac{x!}{(x-y)!y!}\,\quad$
+ Let $m,n \in (\mathbb{Z})$.Then there exists $i,i1 \in (\mathbb{Z})$ such that $gcd(m,n) = a(i) + b(i1)$
+ If points $D$, $E$ and $F$ are chosen on $BC$, $AC$ and $AB$ respectively so that $\frac{AF}{FB}  \cdot \frac{BD}{DC} \cdot \frac{CE}{EA} = 1$. then $AD$, $BE$ and $CF$ are concurrent, or all three parallel.
+let $f:\mathbb{N} \rightarrow \mathbb{R}$ be a sequence of real numbers .Then no interval $(a,b)$ can be the range of a sequence of real numbers
+Let the functions f and g are defined, they have continuous derivatives in the open interval $(a,b)$ and $g'(x) \ne 0$ everywhere in the interval $(a,b)$ .Let $\lim_{x\to a}f(x)=\lim_{x\to a}g(x)=+\infty$ and let $\lim_{x\to a}\frac{f'(a)}{g'(a)}$ exists in a generalised sense .Then $\lim_{x\to a}\frac{f(a)}{g(a)}=\lim_{x\to a}\frac{f'(a)}{g'(a)}$
+let $p1p3=p2p3$ .Then $m\angle p1=m\angle p2$
+$Partial_Sums = 1+a+a^2+\cdots + a^n = {1-a^{n+1}\over 1-a}$
+Let $\displaystyle \sum_{k \mathop = 0}^{n - 1} \left({b + k d}\right) = b + \left({b + d}\right) + \left({b + 2 d}\right) + \cdots + \left({b + \left({n - 1}\right) d}\right)$.Then $\displaystyle \sum_{k \mathop = 0}^{n - 1} \left({b + k d}\right)=\displaystyle \sum_{k \mathop = 0}^{n - 1} \left({b + k d}\right)=\displaystyle \frac {n \left({b + l}\right)} 2$
+Let $Q$ be a natural number and $a,b$ be natural numbers.Prove that $\gcd(a, b) = \gcd(a, b − a)$
+let $n0$ is even perfect number and let $p$ be a natural number.Then $(2^p-1)$ is prime and  $n0=(2^p-1)(2^{p-1})$
+If G is a finite group, and H a subgroup of G, then the order of H will divide the order of G. More precisely,$|G| = |H| \cdot (\text{index }H)$ $|G| = |H| \cdot (G:H)$
+Let $G$ be a finite group, let $p$ a prime number, and let's suppose $|G|=p^ns$ and $p$ doesn't divide $s$ and let $n_p$ be the number p-sylow subgroups of $G$ then $\begin{cases}n_p |s\\n_p  \equiv 1 \mod p\end{cases}$
+Let $property(0)$ and let that $property(k)$ is true for an arbitrary $k\in (\mathbb{N})$.Prove that the inductive hypothesis implies $property(k+1)$.
+let $f$ be continuous on $p$ and $g$ for  $p,g$ where $p < g$ .Then  \[\frac{{f(g) - f(p)}}{{g - p}} = f'(x0)\]
+Let $f $ be continuous on $[xa,\,xb]$ and let $f(xa) < f(xb)$ and let $a,b,d$ be real numbers and let $f(xa)=a$and $f(xb)=b$ Then for every $d$ such that $a <= d <= b $ there exists a $xc\in[a,\,b]$ such that $f(xc)=d$
+Prove that for every natural number $n$ of exactly four digits, if the sum of digits is divisible by 3, then $n$ itself is divisible by 3
+let $f$ be continuous on $p$ and $g$ for  $p,g$ where $p < g$ .Then  \[\frac{{f(g) - f(p)}}{{g - p}} = f'(x0)\] 
+Suppose $\vec{f},\vec{v} \in \mathbb{R}^n$. Then $|\vec{f} \bullet \vec{v}| \le \|\vec{f}\| \|\vec{v}\| \label{cs-ineq} $
+Let $f $ be continuous on $[xa,\,xb]$ and let $f(xa) < f(xb)$ and let $a,b,d$ be real numbers and let $f(xa)=a$and $f(xb)=b$ Then for every $d$ such that $a <= d <= b $ there exists a $xc\in[a,\,b]$ such that $f(xc)=d$
+Let $p$ is prime and $p \mid fn$, then either $p \mid f$ or $p \mid n$.
+let $G=(V,E)$ be a finite, simple, undirected graph.For $v\in V$ we set $N(v)=\{w\in V:\{v,w\}\in E\}$
+Prove that for every natural number $n$ of exactly four digits, if the sum of digits is divisible by 3, then $n$ itself is divisible by 3
+The remainder theorem says if $r$ is a root of a degree n polynomial $p(L)$ , That is $p(r) = 0$ .Then $(L-r) | p(L)$ and equivlantely $p(L) = (L-r)q(L)$
+$\left| x1 - x2 \right| \ge \big||x1| - |x2|\big|$
+${A,B,C}$ is a triangle and $\angle$ $(A,B,C) < PI$ \begin{align*} &\angle(E,C,A) =\frac{angle(B,C,A)}{3}\\ &\angle(C,A,E) =\frac{angle(C,A,B)}{3}\\&\angle(A,B,F) =\frac{angle(A,B,C)}{3}\\ &\angle(F,A,B) =\frac{angle(C,A,B)}{3}\\ &\angle(B,C,G) = \frac{angle(B,C,A)}{3}\\ &\angle(G,B,C) = \frac{angle(A,B,C)}{3}\\ \end{align*}.Then $|F-E|=|G-F| $ $|F-E|=|E-G|$ $ |G-F|=|E-G|$ 
+Let $X$ be a RealUnitarySpace and let $seq1, seq2$ be $sequence(X) ,if $seq1$ is convergent and $seq2$ is convergent .Then $seq1 - seq2$ is convergent
+Let $X$ be  a RealUnitarySpace and let $a$ be Real and $seq$ be $sequence(X)$ ,if $seq$ is convergent .Then  $a * seq$ is convergent
+Let $Y$ being RealUnitarySpace and let seq5 be a $sequence(Y) ,if $seq5$ is convergent .Then $- seq5$ is convergent 

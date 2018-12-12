@@ -1,0 +1,61 @@
+|- ~rational(sqrt(&2))
+|- !a n. a(0) = Cx(&0) \/ ~(!k. k IN 1..n ==> a(k) = Cx(&0))^^^&&&^^^==> ?z. vsum(0..n) (\i. a(i) * z pow i) = Cx(&0)
+|- !A B C:real^2.^^^&&&^^^orthogonal (A - B) (C - B)^^^&&&^^^==> norm(C - A) pow 2 = norm(B - A) pow 2 + norm(C - B) pow 2
+|- !p q. prime p /\ prime q /\ ODD p /\ ODD q /\ ~(p = q)^^^&&&^^^==> legendre(p,q) * legendre(q,p) =^^^&&&^^^--(&1) pow ((p - 1) DIV 2 * (q - 1) DIV 2)
+|- !a n. coprime(a,n) ==> (a EXP (phi n) == 1) (mod n)
+|- !p:real^3->bool.^^^&&&^^^polytope p /\ aff_dim p =&3^^^&&&^^^==>  (CARD {v | v face_of p /\ aff_dim(v) =&0} +^^^&&&^^^CARD {f | f face_of p /\ aff_dim(f) =&2}) -^^^&&&^^^CARD {e | e face_of p /\ aff_dim(e) =&1} = 2
+|- !f f' a b. a <= b /\ (!x. a <= x /\ x <= b ==> (f diffl f'(x))(x))^^^&&&^^^==> defint(a,b) f' (f(b) - f(a))
+|- !t n. (Cx(cos t) + ii * Cx(sin t)) pow n =^^^&&&^^^Cx(cos(&n * t)) + ii * Cx(sin(&n * t))
+|- !x. algebraic x^^^&&&^^^==> ?n c. c > &0 /\^^^&&&^^^!p q. ~(q = 0) ==> &p / &q = x \/^^^&&&^^^abs(x - &p / &q) > c / &q pow n
+|- !a. &0 <= a <=> ?w x y z. a = w pow 2 + x pow 2 + y pow 2 + z pow 2
+|- !p k. prime(p) /\ (p = 4 * k + 1) ==> ?x y. p = x EXP 2 + y EXP 2
+|- ~countable(UNIV:real->bool)
+|- !u v w. ((u EXP 2) + (v EXP 2) = w EXP 2) /\ coprime(u,v) /\^^^&&&^^^(EVEN(u) /\ ODD(v) /\ ODD(w)) ==>^^^&&&^^^?p q. coprime(p,q) /\^^^&&&^^^(u = 2 * p * q) /\^^^&&&^^^(v = (p EXP 2) - (q EXP 2)) /\^^^&&&^^^(w = (p EXP 2) + (q EXP 2))
+|- !s:A->bool t:B->bool. s <=_c t /\ t <=_c s <=> (s =_c t)
+|- (\n. (-- &1) pow n / &(2 * n + 1)) sums (pi / &4)
+|- !A B C:real^N. ~(A = B /\ B = C /\ A = C)^^^&&&^^^==> angle(B,A,C) + angle(A,B,C) + angle(B,C,A) = pi
+|- !c r x1 x2 x3 x4 x5 x6 x7 x8 x9:real^2.^^^&&&^^^PAIRWISE (\x y. ~(x = y)) [x1;x2;x3;x4;x5;x6] /\^^^&&&^^^dist(c,x1) = r /\ dist(c,x2) = r /\ dist(c,x3) = r /\^^^&&&^^^dist(c,x4) = r /\ dist(c,x5) = r /\ dist(c,x6) = r /\^^^&&&^^^collinear {x1,x9,x5} /\^^^&&&^^^collinear {x1,x8,x6} /\^^^&&&^^^collinear {x2,x9,x4} /\^^^&&&^^^collinear {x2,x7,x6} /\^^^&&&^^^collinear {x3,x8,x4} /\^^^&&&^^^collinear {x3,x7,x5}^^^&&&^^^==> collinear {x7,x8,x9}
+|- all_countings a b =^^^&&&^^^let n = a + b in^^^&&&^^^CARD {f | f IN (1..n --> {A,B}) /\^^^&&&^^^CARD { i | i IN 1..n /\ f(i) = A} = a /\^^^&&&^^^CARD { i | i IN 1..n /\ f(i) = B} = b}^^^&&&^^^|- valid_countings a b =^^^&&&^^^let n = a + b in^^^&&&^^^CARD {f | f IN (1..n --> {A,B}) /\^^^&&&^^^CARD { i | i IN 1..n /\ f(i) = A} = a /\^^^&&&^^^CARD { i | i IN 1..n /\ f(i) = B} = b /\^^^&&&^^^!m. 1 <= m /\ m <= n^^^&&&^^^==> CARD { i | i IN 1..m /\ f(i) = A} >^^^&&&^^^CARD { i | i IN 1..m /\ f(i) = B}}^^^&&&^^^|- !a b. &(valid_countings a b) =^^^&&&^^^if a <= b then if b = 0 then &1 else &0^^^&&&^^^else (&a - &b) / (&a + &b) *  &(all_countings a b)
+|- ~(convergent (\n. sum(1..n) (\i. &1 / &i)))
+|- !f:real^N->real^N s.^^^&&&^^^compact s /\ convex s /\ ~(s = {}) /\^^^&&&^^^f continuous_on s /\ IMAGE f s SUBSET s^^^&&&^^^==> ?x. x IN s /\ f x = x
+|- !n a. 1 <= n /\ (!i. 1 <= i /\ i <= n ==> &0 <= a(i))^^^&&&^^^==> root n (product(1..n) a) <= sum(1..n) a / &n
+|- !a x y.^^^&&&^^^~(a = 0) /\^^^&&&^^^(x EXP 2 = (a EXP 2 - 1) * y EXP 2 + 1)^^^&&&^^^==> ?n. (x = X a n) /\ (y = Y a n)
+|- (\n. sum(1..n) (\k. &1 / &(triangle k))) --> &2
+|- !n. (x + y) pow n = sum(0..n) (\k. &(binom(n,k)) * x pow k * y pow (n - k))
+|- !p. ~(p = 1) ==> (prime p <=> (FACT(p - 1) == p - 1) (mod p))
+|- !(s:A->bool) n. s HAS_SIZE n ==> {t | t SUBSET s} HAS_SIZE (2 EXP n)
+|- !G. vertices(G) = {0,1,2,3} /\^^^&&&^^^edges(G) = {10,20,30,40,50,60,70} /\^^^&&&^^^termini G (10) = {0,1} /\^^^&&&^^^termini G (20) = {0,2} /\^^^&&&^^^termini G (30) = {0,3} /\^^^&&&^^^termini G (40) = {1,2} /\^^^&&&^^^termini G (50) = {1,2} /\^^^&&&^^^termini G (60) = {2,3} /\^^^&&&^^^termini G (70) = {2,3}^^^&&&^^^==> ~(?es a b. eulerian G es (a,b))
+|- !centre radius q r s t b.^^^&&&^^^between b (q,r) /\ between b (s,t) /\^^^&&&^^^length(q,centre) = radius /\ length(r,centre) = radius /\^^^&&&^^^length(s,centre) = radius /\ length(t,centre) = radius^^^&&&^^^==> length(q,b) * length(b,r) = length(s,b) * length(b,t)
+|- !A B C:real^2.^^^&&&^^^let a = dist(C,B)^^^&&&^^^and b = dist(A,C)^^^&&&^^^and c = dist(B,A) in^^^&&&^^^let s = (a + b + c) / &2 in^^^&&&^^^measure(convex hull {A,B,C}) =^^^&&&^^^sqrt(s * (s - a) * (s - b) * (s - c))
+|- !n m s:A->bool.^^^&&&^^^s HAS_SIZE n^^^&&&^^^==> {t | t SUBSET s /\ t HAS_SIZE m} HAS_SIZE binom(n,m)
+|- !a b. ?d. &0 <= d /\ d divides a /\ d divides b /\^^^&&&^^^?x y. d = a * x + b * y
+|- !A B C X Y Z:real^2.^^^&&&^^^~(collinear {A,B,C}) /\^^^&&&^^^between X (B,C) /\ between Y (C,A) /\ between Z (A,B)^^^&&&^^^==> (dist(B,X) * dist(C,Y) * dist(A,Z) =^^^&&&^^^dist(X,C) * dist(Y,A) * dist(Z,B) <=>^^^&&&^^^(?P. between P (A,X) /\ between P (B,Y) /\ between P (C,Z)))
+|- !s:A->bool. s <_c {t | t SUBSET s}
+|- !f g f' g' c L d.^^^&&&^^^&0 < d /\^^^&&&^^^(!x. &0 < abs(x - c) /\ abs(x - c) < d^^^&&&^^^==> (f diffl f'(x)) x /\ (g diffl g'(x)) x /\ ~(g'(x) = &0)) /\^^^&&&^^^(f --> &0) c /\ (g --> &0) c /\ ((\x. f'(x) / g'(x)) --> L) c^^^&&&^^^==> ((\x. f(x) / g(x)) --> L) c
+|- !A B C:real^N. dist(A,C) = dist(B,C) ==> angle(C,A,B) = angle(A,B,C)
+|- !x. ~(x = &1) ==>^^^&&&^^^!n. (sum(0,n) (\n. x pow n) = ((x pow n) - &1) / (x - &1))
+|- !n. 1 <= n^^^&&&^^^==> nsum(0..n-1) (\i. a + d * i) = (n * (2 * a + (n - 1) * d)) DIV 2
+|- egcd(m,n) = if m = 0 then n^^^&&&^^^else if n = 0 then m^^^&&&^^^else if m <= n then egcd(m,n - m)^^^&&&^^^else egcd(m - n,n)
+|- !n. EVEN(n) /\ perfect(n)^^^&&&^^^==> ?k. prime(2 EXP k - 1) /\ n = 2 EXP (k - 1) * (2 EXP k - 1)
+|- !g h ( ** ) i e.^^^&&&^^^group (g,( ** ),i,e:A) /\ subgroup h (g,( ** ),i,e) /\ FINITE g^^^&&&^^^==> ?q. (CARD(g) = CARD(q) * CARD(h)) /\^^^&&&^^^(!b. b IN g ==> ?a x. a IN q /\ x IN h /\ (b = a ** x))
+|- !e op i G p.^^^&&&^^^group (G,op,i,e)^^^&&&^^^==> FINITE G^^^&&&^^^==> prime p^^^&&&^^^==> (!n. p EXP n divides CARD G^^^&&&^^^==> (?H. subgroup op i H G /\ CARD H = p EXP n))
+|- !e p G op i.^^^&&&^^^group (G,op,i,e)^^^&&&^^^==> FINITE G^^^&&&^^^==> prime p^^^&&&^^^==> (!n H K.^^^&&&^^^~(p EXP SUC n divides CARD G)^^^&&&^^^==> subgroup op i H G^^^&&&^^^==> subgroup op i K G^^^&&&^^^==> CARD H = p EXP n^^^&&&^^^==> CARD K = p EXP n^^^&&&^^^==> (?g. g IN G /\ H = set_op1 (conjg (op,i) g) K)
+|- !e p op i G.^^^&&&^^^group (G,op,i,e)^^^&&&^^^==> FINITE G^^^&&&^^^==> prime p^^^&&&^^^==> (!n H.^^^&&&^^^~(p EXP SUC n divides CARD G)^^^&&&^^^==> subgroup op i H G^^^&&&^^^==> CARD H = p EXP n^^^&&&^^^==> CARD {K | subgroup op i K G /\ CARD K = p EXP n} =^^^&&&^^^CARD (cosets op G (normalizer op i G H)))
+|- !P. P 0 /\ (!n. P(n) ==> P(SUC n)) ==> (!n. P n)
+|- !f a b. a < b /\^^^&&&^^^(!x. a <= x /\ x <= b ==> f contl x) /\^^^&&&^^^(!x. a < x /\ x < b ==> f differentiable x)^^^&&&^^^==> ?l z. a < z /\ z < b /\ (f diffl l)(z) /\^^^&&&^^^(f(b) - f(a) = (b - a) * l)
+|- !x:real^N y. abs(x dot y) <= norm(x) * norm(y)
+|- !f a b y. a <= b /\^^^&&&^^^(f(a) <= y /\ y <= f(b)) /\^^^&&&^^^(!x. a <= x /\ x <= b ==> f contl x)^^^&&&^^^==> (?x. a <= x /\ x <= b /\ (f(x) = y))
+|- !n. ~(n = 0)^^^&&&^^^==> ?!i. FINITE {p | ~(i p = 0)} /\^^^&&&^^^(!p. ~(i p = 0) ==> prime p) /\^^^&&&^^^n = product {p | ~(i p = 0)} (\p. p EXP (i p))
+|- !friend:person->person->bool.^^^&&&^^^FINITE(:person) /\^^^&&&^^^(!x. ~(friend x x)) /\^^^&&&^^^(!x y. friend x y ==> friend y x) /\^^^&&&^^^(!x y. ~(x = y) ==> ?!z. friend x z /\ friend y z)^^^&&&^^^==> ?u. !v. ~(v = u) ==> friend u v
+|- 3 divides (nsum(0..n) (\i. 10 EXP i * d(i))) <=>^^^&&&^^^3 divides (nsum(0..n) (\i. d i))
+|- !a p. (poly p a = &0) <=> (p = []) \/ ?q. p = [--a; &1] ** q
+|- !x y. norm(x + y) <= norm(x) + norm(y)
+|- !A B C:real^2 P Q R.^^^&&&^^^~collinear{A,B,C} /\ {P,Q,R} SUBSET convex hull {A,B,C} /\^^^&&&^^^angle(A,B,R) = angle(A,B,C) / &3 /\^^^&&&^^^angle(B,A,R) = angle(B,A,C) / &3 /\^^^&&&^^^angle(B,C,P) = angle(B,C,A) / &3 /\^^^&&&^^^angle(C,B,P) = angle(C,B,A) / &3 /\^^^&&&^^^angle(C,A,Q) = angle(C,A,B) / &3 /\^^^&&&^^^angle(A,C,Q) = angle(A,C,B) / &3^^^&&&^^^==> dist(R,P) = dist(P,Q) /\ dist(Q,R) = dist(P,Q)
+|- !s t. s HAS_SIZE 23 /\ t HAS_SIZE 365==>^^^&&&^^^2 * CARD {f | f IN (s -> t) /\^^^&&&^^^?x y. x IN s /\ y IN s /\ ~(x = y) /\ f(x) = f(y)}^^^&&&^^^>= CARD (s -> t)
+
+
+
+
+
+
+

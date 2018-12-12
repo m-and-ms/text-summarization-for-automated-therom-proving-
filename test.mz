@@ -1,0 +1,30 @@
+theorem :: EUCLID_6:38^^^&&&^^^p1 in circle(a,b,r) & p2 in circle(a,b,r) & p3 in circle(a,b,r) &^^^&&&^^^p4 in circle(a,b,r) & p in LSeg(p1,p3) & p in LSeg(p2,p4) implies^^^&&&^^^|.p1-p.|*|.p-p3.| = |.p2-p.|*|.p-p4.|;
+theorem :: EUCLID_6:39^^^&&&^^^a = |.p2-p1.| & b = |.p3-p2.| & c = |.p1-p3.| &^^^&&&^^^s = the_perimeter_of_polygon3(p1,p2,p3)/2 implies^^^&&&^^^abs(the_area_of_polygon3(p1,p2,p3)) = sqrt(s*(s-a)*(s-b)*(s-c));
+theorem :: CARD_FIN:16^^^&&&^^^x<>y implies card Choose(X,k,x,y)=card X choose k;
+theorem :: NEWTON:67^^^&&&^^^for m,n st m>0 or n>0 holds ex i,i1 st i*m + i1*n = m hcf n;
+theorem :: MENELAUS:21^^^&&&^^^(A, B, C is_a_triangle &^^^&&&^^^A1 = (1 - lambda) * B + lambda * C &^^^&&&^^^B1 = (1 - mu) * C + mu * A &^^^&&&^^^C1 = (1 - nu) * A + nu * B &^^^&&&^^^lambda <> 1 & mu <> 1 & nu <> 1 & ((1 - mu) + lambda * mu) <> 0 &^^^&&&^^^((1 - lambda) + nu * lambda) <> 0 & ((1 - nu) + mu * nu) <> 0) implies^^^&&&^^^((lambda / (1 - lambda)) * (mu / (1 - mu)) * (nu / (1 - nu)) = 1^^^&&&^^^iff^^^&&&^^^(ex A2 st A, A1, A2 is_collinear &^^^&&&^^^B, B1, A2 is_collinear &^^^&&&^^^C, C1, A2 is_collinear));
+theorem :: CARD_1:14^^^&&&^^^Card X <` Card bool X;
+theorem :: L_HOSPIT:10^^^&&&^^^(ex N being Neighbourhood of x0 st f is_differentiable_on N &^^^&&&^^^g is_differentiable_on N & N \ {x0} c= dom (f/g) &^^^&&&^^^N c= dom ((f`|N)/(g`|N)) & f.x0 = 0 & g.x0 = 0 &^^^&&&^^^(f`|N)/(g`|N) is_continuous_in x0)^^^&&&^^^implies f/g is_convergent_in x0 & lim(f/g,x0) = diff(f,x0)/diff(g,x0);
+theorem :: EUCLID_6:16^^^&&&^^^|.p3-p1.|=|.p2-p3.| & p1<>p2 implies angle(p3,p1,p2)=angle(p1,p2,p3);
+theorem :: SERIES_1:22^^^&&&^^^a <> 1 implies Partial_Sums(a GeoSeq).n = (1 - a to_power (n+1))/(1-a);
+theorem :: SERIES_2:42^^^&&&^^^(for n holds s.n = a*n+b) implies^^^&&&^^^for n holds Partial_Sums(s).n = (n+1)*(s.0 + s.n)/2;
+scheme :: NAT_1:sch 8^^^&&&^^^Euklides { Q(Nat)->Nat, a,b()->Nat } :^^^&&&^^^ex n st Q(n) = a() hcf b() & Q(n + 1) = 0^^^&&&^^^provided^^^&&&^^^0 < b() & b() < a() and^^^&&&^^^Q(0) = a() & Q(1) = b() and^^^&&&^^^for n holds Q(n + 2) = Q(n) mod Q(n + 1);
+theorem :: NAT_5:39^^^&&&^^^n0 is even & n0 is perfect implies^^^&&&^^^ex p being natural number^^^&&&^^^st 2|^p -' 1 is prime & n0 = 2|^(p -' 1)*(2|^p -' 1);
+theorem :: GROUP_2:147^^^&&&^^^G is finite implies ord G = ord H * index H;
+theorem :: GROUP_10:13^^^&&&^^^for G being finite Group, p being prime (natural number) holds^^^&&&^^^card the_sylow_p-subgroups_of_prime(p,G) mod p = 1 &^^^&&&^^^card the_sylow_p-subgroups_of_prime(p,G) divides ord G;
+scheme :: NAT_1:sch 1^^^&&&^^^Ind { P[Nat] } :^^^&&&^^^for k being Nat holds P[k]^^^&&&^^^provided^^^&&&^^^P[0] and^^^&&&^^^for k being Nat st P[k] holds P[k + 1];
+theorem :: ROLLE:3^^^&&&^^^for p,g st p<g for f st^^^&&&^^^f is_continuous_on [.p,g.] & f is_differentiable_on ].p,g.[^^^&&&^^^ex x0 st x0 in ].p,g.[ & diff(f,x0)=(f.g-f.p)/(g-p);
+theorem :: TOPREAL5:8 :: General Intermediate Value Point Theorem^^^&&&^^^for X being non empty TopSpace,xa,xb being Point of X,^^^&&&^^^a,b,d being Real,f being continuous map of X,R^1 st^^^&&&^^^X is connected & f.xa=a & f.xb=b & a<=d & d<=b^^^&&&^^^ex xc being Point of X st f.xc =d;
+theorem :: NUMERAL1:9^^^&&&^^^for n being natural number holds^^^&&&^^^3 divides n iff 3 divides Sum digits(n,10);
+theorem :: ROLLE:3^^^&&&^^^for p,g st p<g for f st^^^&&&^^^f is_continuous_on [.p,g.] & f is_differentiable_on ].p,g.[^^^&&&^^^ex x0 st x0 in ].p,g.[ & diff(f,x0)=(f.g-f.p)/(g-p);
+theorem :: HERMITAN:45^^^&&&^^^:: Schwarz inequality^^^&&&^^^for V be VectSp of F_Complex, v,w be Vector of V^^^&&&^^^for f be diagReR+0valued hermitan-Form of V^^^&&&^^^holds |. f.[v,w] .|^2 <= signnorm(f,v) * signnorm(f,w);
+theorem :: TOPREAL5:8 :: General Intermediate Value Point Theorem^^^&&&^^^for X being non empty TopSpace,xa,xb being Point of X,^^^&&&^^^a,b,d being Real,f being continuous map of X,R^1 st^^^&&&^^^X is connected & f.xa=a & f.xb=b & a<=d & d<=b^^^&&&^^^ex xc being Point of X st f.xc =d;
+theorem :: NAT_3:61^^^&&&^^^Product ppf n = n;
+theorem :: FRIENDS1:14^^^&&&^^^FSG is non empty implies FSG is with_universal_friend;
+theorem :: NUMERAL1:9^^^&&&^^^for n being natural number holds^^^&&&^^^3 divides n iff 3 divides Sum digits(n,10);
+theorem :: UPROOTS:50  :: Factor theorem (Bezout)^^^&&&^^^for L being non degenerated comRing, r being Element of L,^^^&&&^^^p being Polynomial of L st r is_a_root_of p holds ^^^&&&^^^p = <%-r,1.L%>*'poly_quotient(p,r);
+theorem :: EUCLID:16^^^&&&^^^|.x1 - x2.| <= |.x1.| + |.x2.|;
+theorem :: EUCLID11:22^^^&&&^^^A,B,C is_a_triangle & angle(A,B,C) < PI &^^^&&&^^^angle(E,C,A) = angle(B,C,A) / 3 &^^^&&&^^^angle(C,A,E) = angle(C,A,B) / 3 &^^^&&&^^^angle(A,B,F) = angle(A,B,C) / 3 &^^^&&&^^^angle(F,A,B) = angle(C,A,B) / 3 &^^^&&&^^^angle(B,C,G) = angle(B,C,A) / 3 &^^^&&&^^^angle(G,B,C) = angle(A,B,C) / 3^^^&&&^^^implies^^^&&&^^^|.F-E.| = |.G-F.| & |.F-E.| = |.E-G.| & |.G-F.| = |.E-G.|;
+theorem Th4: :: BHSP_2:4^^^&&&^^^for X being RealUnitarySpace^^^&&&^^^for seq1, seq2 being sequence of X st seq1 is convergent & seq2 is convergent holds ^^^&&&^^^seq1 - seq2 is convergent
+theorem Th5: :: BHSP_2:5^^^&&&^^^for X being RealUnitarySpace^^^&&&^^^for a being Real^^^&&&^^^for seq being sequence of X st seq is convergent holds ^^^&&&^^^a * seq is convergent
+theorem Th6: :: BHSP_2:6^^^&&&^^^for Y being RealUnitarySpace^^^&&&^^^for seq5 being sequence of Y st seq5 is convergent holds ^^^&&&^^^- seq5 is convergent
